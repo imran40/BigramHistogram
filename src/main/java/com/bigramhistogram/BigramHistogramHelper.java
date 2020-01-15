@@ -17,6 +17,12 @@ public class BigramHistogramHelper {
     @Autowired
     private BigramHistogramBean bigramHistogramBean;
     
+    /** This method is used to compute a Bigram Histogram
+    *
+    * @param  sentence The sentence that would be used as a data for Bigram Histogram
+    * @return BigramHistogramBean This bean contains a map that stores the count of Bigram in the sentence. Bigram phrase is the key for this map.
+    * 		  It also contains a list of Bigrams that are inserted in the list in the order of appearance in the sentence.
+    */
 	public BigramHistogramBean computeBigramHistogram(String sentence) {
 
 		String[] splitSentence = sentence.split(" ");
@@ -42,7 +48,11 @@ public class BigramHistogramHelper {
 		return bigramHistogramBean;
 	}
 
-	
+    /** This method is used to Print a Bigram Histogram
+    *
+    * @param  BigramHistogramBean This bean contains a map that stores the count of Bigram in the sentence. Bigram phrase is the key for this map.
+    * 		  It also contains a list of Bigrams that are inserted in the list in the order of appearance in the sentence.
+    */
 	public void printBigramHistogram(BigramHistogramBean bigramHistogramBean) {
 
 		StringBuilder histogram = null;
@@ -55,7 +65,11 @@ public class BigramHistogramHelper {
 		}
 	}
 	
-	
+    /** This method is used to load sentences from a text file
+    *
+    * @param  filePath This is the path of the file that holds the sentences used as a data to compute bigram histogram
+    * @return This method returns a list of sentences that are loaded from the text file.
+    */
 	public List<String> loadSentences(String filePath) {
 		List<String> senentences = null;
 		try {
