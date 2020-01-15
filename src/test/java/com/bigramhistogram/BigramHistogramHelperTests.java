@@ -36,7 +36,7 @@ public class BigramHistogramHelperTests  extends BigramHistogramApplicationTests
 	}
 	
 	@Test
-	public void loadSentences() throws Exception {
+	public void testLoadSentences() throws Exception {
 		int testSentencesCount = 6;
 		boolean isTestSuccessful = false;
 		
