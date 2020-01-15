@@ -37,7 +37,7 @@ public class BigramHistogramHelperTests  extends BigramHistogramApplicationTests
 	
 	@Test
 	public void loadSentences() throws Exception {
-		int testSentencesCount = 5;
+		int testSentencesCount = 6;
 		boolean isTestSuccessful = false;
 		
 		String filePath = System.getProperty("user.dir") + "\\TestFiles\\Sentences.txt";
